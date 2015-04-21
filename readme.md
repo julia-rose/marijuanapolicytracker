@@ -7,7 +7,7 @@ With this app, users can:
 * Create a profile
 * Browse information on marijuana policy over time and by state
 * Subscribe to updates about different states
-* View content for/about marijuana policy specific to that state (pending bills, politicians' stances, criminal stats, local dispensary info)
+* View content for/about marijuana policy specific to that state (recent news, local resources)
 * Share information and news updates on social media
 
 -------
@@ -18,9 +18,8 @@ In a legal landscape that is rapidly changing, users do not have an easy way to 
 
 -------
 
-Rails Models:
+APIs used:
 
-* User (name:string, email:string, facebook url:string, twitter url:string, bio:text, home state:string, subscribed states:array of strings)
-* State (name:string, status:string, grow:boolean, grow_details:text, possess:boolean, possess_details:text, carry_limit:string, buysell:boolean, buysell_details:text, paraph:boolean, paraph_details:text)
-* Follows (user_id, state_id)
+-Faroo Web Search: https://www.mashape.com/faroo/faroo-web-search
+-Leafly: https://developer.leafly.com/ via the Vaporizer gem: https://github.com/nflorentin/vaporizer
 

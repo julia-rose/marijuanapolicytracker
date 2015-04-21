@@ -9,9 +9,9 @@ class StatesController < ApplicationController
 		@array = @state.name.split
 		@name_plus = @array.join("+")
 
-		secret_key = 'cPJySWZolCmshX38jPrzJeawUuFLp1ML0DpjsnBhLd1ZrMjwBT'
-		leafly_id = '31bbc145'
-		leafly_key = '4f047bb4be30a1dfa67f41f73cd9c23e'
+		secret_key = ENV['secret_key']
+		leafly_id = ENV['leafly_id']
+		leafly_key = ENV['leafly_key']
 
 		Vaporizer.configure do |config|
   		config.app_id = "#{leafly_id}"

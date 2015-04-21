@@ -1,0 +1,25 @@
+<h1><%= @state.name %></h1>
+
+<p>Grow: <%= @state.grow %> Details: <%= @state.grow_details %></p>
+<p>Possess: <%= @state.possess %> Details: <%= @state.possess_details %></p>
+<p>Buy or sell: <%= @state.buy_or_sell %> Details: <%= @state.buy_or_sell_details %></p>
+<p>Carry limit: <%= @state.carry_limit %></p>
+
+
+<h2>State News</h2>
+
+<ul>
+<% @news["results"].each_with_index do |result, index| %>
+	<li><%= link_to @news["results"][index]["title"], @news["results"][index]["url"] %></li>
+	<% end %>
+</ul>
+
+<% if @resources["stores"].count > 0 %>
+	<h2>Resources in this State</h2>
+
+	<ul>
+	<% @resources["stores"].each_with_index do |store, index| %>
+		<li><%= link_to @resources["stores"][index]["name"], @resources["stores"][index]["permalink"]%> - <%= @resources["stores"][index]["locationLabel"] %></li>
+		<% end %>
+	</ul>
+<% end %>

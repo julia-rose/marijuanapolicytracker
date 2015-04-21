@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'vaporizer'
+gem 'figaro'
+gem 'unirest'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

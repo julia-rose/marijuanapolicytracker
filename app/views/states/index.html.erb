@@ -1,0 +1,16 @@
+<h2>statessss</h2>
+
+
+
+<form action= "go_to_state" method='post'>
+
+  <%#= select("get", :id, @states.collect {|state| [ state.name, state.id ] }, {prompt: "Select State"}) %>
+  <select name="id"
+  <% @states.each do |state| %>
+  <option value="<%= state.id %>"><%= state.name %></option>
+    <% end %>
+  </select>
+  <input type='submit'>
+  <%#= button_to "Submit", "states/" + state.id %>
+  <%#= button_to "Show", states_path(@state), :class => "button", :method => :get %>
+</form>

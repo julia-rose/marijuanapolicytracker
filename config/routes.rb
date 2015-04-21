@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   root 'states#index'
 
   resources :states
-  resources :users
   devise_for :users
+
+  post'go_to_state', to: "states#go_to_state"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

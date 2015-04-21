@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421140040) do
+ActiveRecord::Schema.define(version: 20150421181554) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20150421140040) do
     t.string   "carry_limit"
     t.boolean  "buy_or_sell"
     t.text     "buy_or_sell_details"
+    t.float    "lat"
+    t.float    "long"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
   end

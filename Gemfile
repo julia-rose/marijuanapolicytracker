@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'vaporizer'
 gem 'figaro'
 gem 'unirest'
 gem 'devise'

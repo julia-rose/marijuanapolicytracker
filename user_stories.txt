@@ -1,0 +1,14 @@
+
+USER STORIES:
+- As a User I want to create a user login, when I navigate to new user sign up.
+- As a user I want to successfully log in to my account via a link on the home page.
+- As a User I want to view a map displaying marijuana legality, by visiting the home page of the web application.
+- As a User I want to see different instances of marijuana legality over time, by toggling a timeline.
+- As a User I want to navigate to a specific state, by selecting an option from a dropdown menu.
+- As a User I want to view state attributes, by navigating to a state view page.
+- As a User I want to track a state's political journey, when I click a corresponding button.
+- As a User I want to navigate back to the homepage, when I want to leave the State Profile view.
+- As a User I want to view my profile information, when I click on my user profile account.
+- As a User I want to see the States I have followed, from the view of my user profile.
+- As a USer I want to navigate to the States view page, by clicking an embedded link on my user profile.
+- As a User I want to successfully log out when I am finished my session by clicking the logout button at point during the application.

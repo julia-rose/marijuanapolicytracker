@@ -1,7 +1,13 @@
 #Marijuana Policy Tracker App
 -------
 
-With this app, users can:
+##Problem summary:
+
+In a legal landscape that is rapidly changing, users do not have an easy way to look up information on marijuana policies from state to state in the US.
+
+-------
+
+##With this app, users can:
 
 * Sign up/sign in
 * Create a profile
@@ -9,12 +15,6 @@ With this app, users can:
 * Subscribe to updates about different states
 * View content for/about marijuana policy specific to that state (recent news, local resources)
 * Share information and news updates on social media
-
--------
-
-##Problem summary:
-
-In a legal landscape that is rapidly changing, users do not have an easy way to look up information on marijuana policies from state to state in the US.
 
 -------
 

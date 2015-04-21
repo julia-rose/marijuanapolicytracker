@@ -1,6 +1,34 @@
-<h2>statessss</h2>
+<h2>US Marijuana Policy Over Time</h2>
+
+<div class='map'>
+ <script language="javascript" type=text/javascript>
+  function checkValue1(){
+         document.getElementById("imagetest").innerHTML = "<img src='http://weather.noaa.gov/pd/usstates.gif'>";
+  }
+  function checkValue2(){
+         document.getElementById("imagetest").innerHTML = "<img src='http://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Map_of_USA_with_state_names.svg/2000px-Map_of_USA_with_state_names.svg.png'>";
+  }
+  function checkValue3(){
+         document.getElementById("imagetest").innerHTML = "<img src='http://www.martinsaphug.com/wp-content/uploads/2010/07/mapoftheusa.jpg'>";
+  }
+
+ </script>
 
 
+
+
+ <div id='imagetest'>
+   <img src='http://www.martinsaphug.com/wp-content/uploads/2010/07/mapoftheusa.jpg'>
+ </div>
+
+ <form name='bob'>
+     <input type="radio" name="field" value="one" onclick='checkValue1()'>one
+     <input type="radio" name="field" value="two" onclick='checkValue2()'>two
+     <input type="radio" name="field" value="three" onclick='checkValue3()'>three
+
+ </form>
+
+ </div>
 
 
 

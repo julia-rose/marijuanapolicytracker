@@ -6,6 +6,8 @@ class StatesController < ApplicationController
 
 	def show
 		@state = State.find(params[:id])
+		@array = @state.name.split
+		@name_plus = @array.join("+")
 
 		secret_key = ENV['secret_key']
 		leafly_id = ENV['leafly_id']
@@ -15,12 +17,20 @@ class StatesController < ApplicationController
   		config.app_id = "#{leafly_id}"
   		config.app_key = "#{leafly_key}"
 		end
-
-		@news = Unirest.get("https://faroo-faroo-web-search.p.mashape.com/api?q=marijuana+#{@state.name}",
+		if @state.name == "District of Columbia"
+			@news = Unirest.get("https://faroo-faroo-web-search.p.mashape.com/api?q=marijuana+d.c.",
   		headers:{
 		    "X-Mashape-Key" => "#{secret_key}",
 		    "Accept" => "application/json"
 		  }).body
+
+		else
+			@news = Unirest.get("https://faroo-faroo-web-search.p.mashape.com/api?q=marijuana+#{@name_plus}",
+	  		headers:{
+			    "X-Mashape-Key" => "#{secret_key}",
+			    "Accept" => "application/json"
+			  }).body
+		end
 
 		@resources = Vaporizer::Location.search(latitude: @state.lat, longitude: @state.long, page: 0, take: 5)
 

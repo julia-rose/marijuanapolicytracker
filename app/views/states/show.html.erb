@@ -7,16 +7,19 @@
 
 
 <h2>State News</h2>
+
 <ul>
 <% @news["results"].each_with_index do |result, index| %>
 	<li><%= link_to @news["results"][index]["title"], @news["results"][index]["url"] %></li>
 	<% end %>
 </ul>
 
-<h2>Resources in this State</h2>
+<% if @resources["stores"].count > 0 %>
+	<h2>Resources in this State</h2>
 
-<ul>
-<% @resources["stores"].each_with_index do |store, index| %>
-	<li><%= link_to @resources["stores"][index]["name"], @resources["stores"][index]["permalink"]%> - <%= @resources["stores"][index]["locationLabel"] %></li>
-	<% end %>
-</ul>
+	<ul>
+	<% @resources["stores"].each_with_index do |store, index| %>
+		<li><%= link_to @resources["stores"][index]["name"], @resources["stores"][index]["permalink"]%> - <%= @resources["stores"][index]["locationLabel"] %></li>
+		<% end %>
+	</ul>
+<% end %>

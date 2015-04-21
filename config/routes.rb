@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
+
   root 'states#index'
 
   resources :states
-  resources :users
   devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -35,4 +35,10 @@ class StatesController < ApplicationController
 		@resources = Vaporizer::Location.search(latitude: @state.lat, longitude: @state.long, page: 0, take: 5)
 
 	end
+
+  def go_to_state
+    @state = State.find(params[:id])
+    redirect_to @state
+  end
+
 end

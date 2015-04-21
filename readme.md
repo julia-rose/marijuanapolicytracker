@@ -10,7 +10,6 @@ In a legal landscape that is rapidly changing, users do not have an easy way to 
 ##With this app, users can:
 
 * Sign up/sign in
-* Create a profile
 * Browse information on marijuana policy over time and by state
 * Subscribe to updates about different states
 * View content for/about marijuana policy specific to that state (recent news, local resources)

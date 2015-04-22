@@ -2,62 +2,48 @@
 
 
  <script language="javascript" type=text/javascript>
-  function checkValue1(){
+    function checkValue1(){
          document.getElementById("imagetest").innerHTML = "<img src='http://weather.noaa.gov/pd/usstates.gif'>";
-  }
-  function checkValue2(){
+       }
+       function checkValue2(){
          document.getElementById("imagetest").innerHTML = "<img src='http://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Map_of_USA_with_state_names.svg/2000px-Map_of_USA_with_state_names.svg.png'>";
-  }
-  function checkValue3(){
+       }
+       function checkValue3(){
          document.getElementById("imagetest").innerHTML = "<img src='http://www.martinsaphug.com/wp-content/uploads/2010/07/mapoftheusa.jpg'>";
-  }
-
+       }
  </script>
 
 
  <div class = "timeline_form">
-   <div class = "time_divisions">
-
-     <!-- <% array = [] %>
-     <% 15.times do %>
-        <%  array << "I" %>
-       <% end %>
-       <%= array.split.join("&nbsp;" * 8).html_safe %> -->
-
-       <% delimiter = "&nbsp;" * 8 %>
+    <div class = "time_divisions">
+       <% delimiter = "&nbsp;" * 5 %>
        <% point_character = "I" %>
-       <%= ("#{point_character}#{delimiter}" * 15).html_safe %>
+       <%= ("#{point_character}#{delimiter}" * 25).html_safe %>
+     </div>
 
-   </div>
+    <div class = "actual_timeline"></div>
+      <form name='timeline_buttons'>
+        <input id='first'  type="radio" name="field" value="one" onclick='checkValue1()'>1990
+        <input id='second' type="radio" name="field" value="two" onclick='checkValue2()'>1996
+        <input id='third'  type="radio" name="field" value="three" onclick='checkValue3()'>2015
+      </form>
+  </div>
 
-   <div class = "actual_timeline"></div>
-
-   <form name='timeline_buttons'>
-
-      <input id='first'  type="radio" name="field" value="one" onclick='checkValue1()'>1990
-      <input id='second' type="radio" name="field" value="two" onclick='checkValue2()'>1996
-      <input id='third'  type="radio" name="field" value="three" onclick='checkValue3()'>2015
-
-    </form>
-
- </div>
-
+ <div class="state_menu">
+   <h3>View Current Policy for:</h3>
+      <form action= "go_to_state" method='post'>
+        <%#= select("get", :id, @states.collect {|state| [ state.name, state.id ] }, {prompt: "Select State"}) %>
+        <select name="id"
+        <% @states.each do |state| %>
+          <option value="<%= state.id %>"><%= state.name %></option>
+          <% end %>
+        </select>
+      <input type='submit'>
+      <%#= button_to "Submit", "states/" + state.id %>
+      <%#= button_to "Show", states_path(@state), :class => "button", :method => :get %>
+      </form>
+  </div>
 
  <div class="display_image" id='imagetest'>
    <img src='http://www.martinsaphug.com/wp-content/uploads/2010/07/mapoftheusa.jpg' )%>
  </div>
-
-
-
-<form action= "go_to_state" method='post'>
-
-  <%#= select("get", :id, @states.collect {|state| [ state.name, state.id ] }, {prompt: "Select State"}) %>
-  <select name="id"
-  <% @states.each do |state| %>
-  <option value="<%= state.id %>"><%= state.name %></option>
-    <% end %>
-  </select>
-  <input type='submit'>
-  <%#= button_to "Submit", "states/" + state.id %>
-  <%#= button_to "Show", states_path(@state), :class => "button", :method => :get %>
-</form>

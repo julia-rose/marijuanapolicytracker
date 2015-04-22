@@ -21,24 +21,30 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
+h2 {
+  border: solid black 1px;
+  text-align: center;
+}
 .nav {
+
   display: inline-block;
-  text-align: left;
+  text-align: center;
 }
 div.display_image img {
    width: 50em;
  }
 
  div.timeline_form input#first{
-   margin-left: 1em;
+   margin-left: 1.5em;
+   border: solid black 1px;
  }
 
  div.timeline_form input#second{
-   margin-left: 10em;
+   margin-left: 5em;
  }
 
 div.timeline_form input#third{
-  margin-left: 37em;
+  margin-left: 44em;
   margin-bottom: 2em;
 }
 
@@ -49,11 +55,19 @@ div.time_divisions {
 
 }
 div.actual_timeline {
-  width: 39em;
+  width: 44em;
   border-bottom: thick solid black;
   border-width: 10px;
   margin-left: 1em;
   margin-bottom: 1em;
 
+}
 
+.state_menu {
+  display: inline-block;
+  text-align: center;
+}
+.diclaimer {
+  text-align: left;
+  width: 100px;
 }

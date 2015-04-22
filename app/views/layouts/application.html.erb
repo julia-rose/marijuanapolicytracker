@@ -7,6 +7,10 @@
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
 </head>
+<header>
+  <% image_tag '/images/usatodaylogo.png' %>
+  <% image_tag '/images/usericon.png' %>
+</header>
 <body>
 
   <p class="nav">
@@ -22,4 +26,10 @@
 <%= yield %>
 
 </body>
+<footer>
+  <div class = "disclaimer">
+    <small>Disclaimer: This is not intended for or offered for legal advice. It is for informational and educational purposes
+      only. It also does not capture nuances of the laws, many of which are a dozen or more pages. Please consult with
+     an attorney licensed to practice in the state in question for legal advice. <small>
+</footer>
 </html>

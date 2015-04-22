@@ -47,30 +47,5 @@
  <div class="display_image" id='imagetest'>
    <img src='http://www.martinsaphug.com/wp-content/uploads/2010/07/mapoftheusa.jpg' )%>
  </div>
-<<<<<<< HEAD
-
- <form name='timeline_buttons'>
-     <input type="radio" name="field" value="one" onclick='checkValue1()'>1990
-     <input type="radio" name="field" value="two" onclick='checkValue2()'>1996
-     <input type="radio" name="field" value="three" onclick='checkValue3()'>2015
-
- </form>
 
 
-
-
-
-<form action= "go_to_state" method='post'>
-
-  <%#= select("get", :id, @states.collect {|state| [ state.name, state.id ] }, {prompt: "Select State"}) %>
-  <select name="id"
-  <% @states.each do |state| %>
-  <option value="<%= state.id %>"><%= state.name %></option>
-    <% end %>
-  </select>
-  <input type='submit'>
-  <%#= button_to "Submit", "states/" + state.id %>
-  <%#= button_to "Show", states_path(@state), :class => "button", :method => :get %>
-</form>
-=======
->>>>>>> ba7afeb910f3fd0f731d02c3a0f0fb7d2ca8fcb5

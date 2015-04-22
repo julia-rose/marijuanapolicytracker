@@ -15,18 +15,37 @@
  </script>
 
 
+ <div class = "timeline_form">
+   <div class = "time_divisions">
+
+     <!-- <% array = [] %>
+     <% 15.times do %>
+        <%  array << "I" %>
+       <% end %>
+       <%= array.split.join("&nbsp;" * 8).html_safe %> -->
+
+       <% delimiter = "&nbsp;" * 8 %>
+       <% point_character = "I" %>
+       <%= ("#{point_character}#{delimiter}" * 15).html_safe %>
+
+   </div>
+
+   <div class = "actual_timeline"></div>
+
+   <form name='timeline_buttons'>
+
+      <input id='first'  type="radio" name="field" value="one" onclick='checkValue1()'>1990
+      <input id='second' type="radio" name="field" value="two" onclick='checkValue2()'>1996
+      <input id='third'  type="radio" name="field" value="three" onclick='checkValue3()'>2015
+
+    </form>
+
+ </div>
 
 
  <div class="display_image" id='imagetest'>
    <img src='http://www.martinsaphug.com/wp-content/uploads/2010/07/mapoftheusa.jpg' )%>
  </div>
-
- <form name='timeline_buttons'>
-     <input type="radio" name="field" value="one" onclick='checkValue1()'>1990
-     <input type="radio" name="field" value="two" onclick='checkValue2()'>1996
-     <input type="radio" name="field" value="three" onclick='checkValue3()'>2015
-
- </form>
 
 
 

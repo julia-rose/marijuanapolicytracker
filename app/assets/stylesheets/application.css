@@ -17,7 +17,43 @@
  *= require_tree .
  *= require_self
  */
+body {
+  font-family: 'Nunito', sans-serif;
+}
 
- div.display_image img {
+.nav {
+  display: inline-block;
+  text-align: left;
+}
+div.display_image img {
    width: 50em;
  }
+
+ div.timeline_form input#first{
+   margin-left: 1em;
+ }
+
+ div.timeline_form input#second{
+   margin-left: 10em;
+ }
+
+div.timeline_form input#third{
+  margin-left: 37em;
+  margin-bottom: 2em;
+}
+
+
+
+div.time_divisions {
+  margin-left: 18px;
+
+}
+div.actual_timeline {
+  width: 39em;
+  border-bottom: thick solid black;
+  border-width: 10px;
+  margin-left: 1em;
+  margin-bottom: 1em;
+
+
+}

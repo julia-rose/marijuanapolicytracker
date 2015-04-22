@@ -9,7 +9,7 @@ class StatesController < ApplicationController
 		@array = @state.name.split
 		@name_plus = @array.join("+")
 
-		secret_key = ENV['secret_key']
+		secret_key = 'cPJySWZolCmshX38jPrzJeawUuFLp1ML0DpjsnBhLd1ZrMjwBT'
 		leafly_id = ENV['leafly_id']
 		leafly_key = ENV['leafly_key']
 

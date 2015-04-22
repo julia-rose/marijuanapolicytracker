@@ -21,3 +21,21 @@
  div.display_image img {
    width: 50em;
  }
+
+.legal {
+  	height: 42px;
+		width: 42px;
+  	border: 3px solid #0E5226;
+  }
+
+.caution {
+  	height: 42px;
+		width: 42px;
+  	border: 3px solid #EB9915;
+  }
+
+.illegal {
+  	height: 42px;
+		width: 42px;
+  	border: 3px solid #E30E0E;
+  }

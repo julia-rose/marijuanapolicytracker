@@ -9,14 +9,14 @@ class StatesController < ApplicationController
 		@array = @state.name.split
 		@name_plus = @array.join("+")
 
-		secret_key = 'cPJySWZolCmshX38jPrzJeawUuFLp1ML0DpjsnBhLd1ZrMjwBT'
-		leafly_id = '31bbc145'
-		leafly_key = '4f047bb4be30a1dfa67f41f73cd9c23e'
+		secret_key = ENV['secret_key']
+		leafly_id = ENV['leafly_id']
+		leafly_key = ENV['leafly_key']
 
-		Vaporizer.configure do |config|
-  		config.app_id = "#{leafly_id}"
-  		config.app_key = "#{leafly_key}"
-		end
+		# Vaporizer.configure do |config|
+  # 		config.app_id = "#{leafly_id}"
+  # 		config.app_key = "#{leafly_key}"
+		# end
 		if @state.name == "District of Columbia"
 			@news = Unirest.get("https://faroo-faroo-web-search.p.mashape.com/api?q=marijuana+d.c.",
   		headers:{
@@ -32,7 +32,7 @@ class StatesController < ApplicationController
 			  }).body
 		end
 
-		@resources = Vaporizer::Location.search(latitude: @state.lat, longitude: @state.long, page: 0, take: 5)
+		# @resources = Vaporizer::Location.search(latitude: @state.lat, longitude: @state.long, page: 0, take: 5)
 
 	end
 

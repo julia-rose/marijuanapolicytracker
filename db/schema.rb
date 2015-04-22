@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421181554) do
+ActiveRecord::Schema.define(version: 20150422175221) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,17 +36,22 @@ ActiveRecord::Schema.define(version: 20150421181554) do
 
   create_table "states", force: :cascade do |t|
     t.string   "name"
-    t.boolean  "grow"
-    t.text     "grow_details"
-    t.boolean  "possess"
-    t.text     "possess_details"
-    t.string   "carry_limit"
-    t.boolean  "buy_or_sell"
+    t.string   "possession"
+    t.text     "possession_details"
+    t.string   "paraphernalia"
+    t.text     "paraphernalia_details"
+    t.string   "consumption"
+    t.text     "consumption_details"
+    t.string   "growing"
+    t.text     "growing_details"
+    t.string   "medical"
+    t.text     "medical_details"
+    t.string   "buy_or_sell"
     t.text     "buy_or_sell_details"
     t.float    "lat"
     t.float    "long"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   create_table "subscriptions", force: :cascade do |t|

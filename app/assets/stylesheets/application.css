@@ -17,11 +17,24 @@
  *= require_tree .
  *= require_self
  */
+body {
+  font-family: 'Nunito', sans-serif;
+}
 
- div.display_image img {
+h2 {
+  border: solid black 1px;
+  text-align: center;
+}
+.nav {
+
+  display: inline-block;
+  text-align: center;
+}
+div.display_image img {
    width: 50em;
  }
 
+<<<<<<< HEAD
 .legal {
   	height: 42px;
 		width: 42px;
@@ -39,3 +52,42 @@
 		width: 42px;
   	border: 3px solid #E30E0E;
   }
+=======
+ div.timeline_form input#first{
+   margin-left: 1.5em;
+   border: solid black 1px;
+ }
+
+ div.timeline_form input#second{
+   margin-left: 5em;
+ }
+
+div.timeline_form input#third{
+  margin-left: 44em;
+  margin-bottom: 2em;
+}
+
+
+
+div.time_divisions {
+  margin-left: 18px;
+
+}
+div.actual_timeline {
+  width: 44em;
+  border-bottom: thick solid black;
+  border-width: 10px;
+  margin-left: 1em;
+  margin-bottom: 1em;
+
+}
+
+.state_menu {
+  display: inline-block;
+  text-align: center;
+}
+.diclaimer {
+  text-align: left;
+  width: 100px;
+}
+>>>>>>> ba7afeb910f3fd0f731d02c3a0f0fb7d2ca8fcb5

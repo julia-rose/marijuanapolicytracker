@@ -1,0 +1,5 @@
+<%= form_for @subscription do |f| %>
+	<%= f.hidden_field :user_id, :value => current_user.id %>
+	<%= f.hidden_field :state_id, :value => @state.id %>
+	<%= f.submit "Subscribe for Policy updates for this State" %>
+<% end %>

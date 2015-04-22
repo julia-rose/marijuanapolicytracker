@@ -1,0 +1,16 @@
+<h2>Welcome!</h2>
+
+<h3>States You Are Following</h3>
+<ul>
+<% @user.states.uniq.each do |state| %>
+<li><%= link_to state.name, state_path(state) %></li>
+<br>
+<% end %>
+</ul>
+
+
+
+
+<script>
+prompt('Where are you visiting us from today??');
+</script>

@@ -17,6 +17,13 @@
       <%= link_to "Login", new_user_session_path %>
     <% end %>
   </p>
+<div>
+  <ul>
+    <% if user_signed_in? %>
+    <li><%= link_to "Your Profile", '/profile' %></li>
+    <% end %>
+    <li><%= link_to "Home Page", '/states' %></li>
+<div>
 
 <%= yield %>
 

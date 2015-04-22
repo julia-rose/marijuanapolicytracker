@@ -24,3 +24,11 @@
 
 
 
+<div class="follow button">
+<% if user_signed_in? %>
+	<%= render partial: "subscriptions/form" %>
+<% else %>
+	<small>Sign in to subscribe to this page!</small>
+<% end %>
+</div>
+

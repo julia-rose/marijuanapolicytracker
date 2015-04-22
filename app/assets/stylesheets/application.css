@@ -1,9 +1,4 @@
-
-
-
-
-
- /** This is a manifest file that'll be compiled into application.css, which will include all the files
+/** This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
@@ -34,7 +29,6 @@ div.display_image img {
    width: 50em;
  }
 
-<<<<<<< HEAD
 .legal {
   	height: 42px;
 		width: 42px;
@@ -52,7 +46,7 @@ div.display_image img {
 		width: 42px;
   	border: 3px solid #E30E0E;
   }
-=======
+
  div.timeline_form input#first{
    margin-left: 1.5em;
    border: solid black 1px;
@@ -90,4 +84,4 @@ div.actual_timeline {
   text-align: left;
   width: 100px;
 }
->>>>>>> ba7afeb910f3fd0f731d02c3a0f0fb7d2ca8fcb5
+

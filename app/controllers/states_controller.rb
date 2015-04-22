@@ -34,6 +34,7 @@ class StatesController < ApplicationController
 
 		@resources = Vaporizer::Location.search(latitude: @state.lat, longitude: @state.long, page: 0, take: 5)
 
+		@subscription = Subscription.new(state: @state, user: current_user)
 	end
 
   def go_to_state

@@ -12,76 +12,152 @@
  *= require_tree .
  *= require_self
  */
-body {
-  font-family: 'Nunito', sans-serif;
-}
-
-h2 {
-  border: solid black 1px;
-  text-align: center;
-}
-.nav {
-
-  display: inline-block;
-  text-align: center;
-}
-div.display_image img {
-   width: 50em;
+ *
+ {
+     margin:0;
+     border:0;
+     padding:0;
+     border-collapse:collapse;
+     border-spacing:0;
+     font-weight:inherit;
+     font-size:inherit;
+     font-style:inherit;
+     color:inherit;
+     background-color:transparent;
+     box-sizing:border-box;
+     font-family:inherit;
  }
 
-.legal {
-  	height: 42px;
-		width: 42px;
-  	border: 3px solid #0E5226;
-  }
-
-.caution {
-  	height: 42px;
-		width: 42px;
-  	border: 3px solid #EB9915;
-  }
-
-.illegal {
-  	height: 42px;
-		width: 42px;
-  	border: 3px solid #E30E0E;
-  }
-
- div.timeline_form input#first{
-   margin-left: 1.5em;
-   border: solid black 1px;
+ body {
+   font-family: 'Nunito', sans-serif;
  }
 
- div.timeline_form input#second{
-   margin-left: 5em;
+ header {
+   background-color: black;
+   display: block;
  }
 
-div.timeline_form input#third{
-  margin-left: 44em;
-  margin-bottom: 2em;
+ .logo {
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .user_image {
+   float: right;
+ }
+
+ .nav li{
+   float: right;
+   display: inline-block;
+   padding-left: 10px;
+ }
+
+ body h2 {
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   padding-top: 100px;
+ }
+
+ .display_image img {
+    width: 50em;
+  }
+
+  /*.timeline_form {
+      float: center;
+  }*/
+
+  /*.timeline_form input#first, input#second, input#third {
+      display: inline-block;
+  }*/
+
+  div.time_divisions {
+    margin-left: 18px;
+  }
+
+  div.actual_timeline {
+    width: 44em;
+    border-bottom: thick solid black;
+    border-width: 10px;
+    margin-left: 1em;
+    margin-bottom: 1em;
+  }
+
+  div.timeline_form input#first{
+    margin-left: 1.5em;
+    color: black;
+  }
+
+  div.timeline_form input#second{
+    margin-left: 5em;
+  }
+
+  div.timeline_form input#third{
+    margin-left: 30em;
+  }
+  .state_menu {
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  .state_menu h3, .state_menu form{
+    display: inline-block;
+    text-align: center;
+  }
+
+
+
+  .legal {
+    	height: 42px;
+  		width: 42px;
+    	border: 3px solid #0E5226;
+    }
+
+  .caution {
+    	height: 42px;
+  		width: 42px;
+    	border: 3px solid #EB9915;
+    }
+
+  .illegal {
+    	height: 42px;
+  		width: 42px;
+    	border: 3px solid #E30E0E;
+    }
+
+/*
+
+
+
+
+header logo, header user_image {
+  margin: 0;
 }
 
 
 
-div.time_divisions {
-  margin-left: 18px;
 
-}
-div.actual_timeline {
-  width: 44em;
-  border-bottom: thick solid black;
-  border-width: 10px;
-  margin-left: 1em;
-  margin-bottom: 1em;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+.state_menu h3 {
+  margin-left: 7em;
 }
 
-.state_menu {
-  display: inline-block;
-  text-align: center;
-}
-.diclaimer {
+footer {
+  font-size: 12px;
   text-align: left;
-  width: 100px;
-}
-
+  width: 250px;
+  border: 1px solid black;
+}*/

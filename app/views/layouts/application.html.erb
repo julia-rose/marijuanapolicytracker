@@ -8,26 +8,27 @@
   <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
 </head>
 <header>
-  <% image_tag '/images/usatodaylogo.png' %>
-  <% image_tag '/images/usericon.png' %>
+  <%= image_tag('usatodaylogo.png', class: 'logo', height:'35') %></h1>
+  <%= image_tag('usericon.png', class: 'user_image', height: '35')%></h2>
 </header>
 <body>
 
-  <p class="nav">
+  <div class="nav">
+    <p>
     <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>
-      <%= link_to 'Signout', destroy_user_session_path, :method => :delete %>
+    <li>  <%= link_to 'Signout', destroy_user_session_path, :method => :delete %> </li>
     <% else %>
-      <%= link_to "Sign up", new_user_registration_path %>
-      <%= link_to "Login", new_user_session_path %>
+    <li>  <%= link_to "Sign up", new_user_registration_path %> </li>
+    <li>  <%= link_to "Login", new_user_session_path %> </li>
     <% end %>
   </p>
-<div>
   <ul>
     <% if user_signed_in? %>
     <li><%= link_to "Your Profile", '/profile' %></li>
     <% end %>
     <li><%= link_to "Home Page", '/states' %></li>
+  </ul>
 <div>
 
 <%= yield %>

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :subscriptions
   get 'profile', to: "users#show"
+  delete 'profile', to: "users#destroy"
   post'go_to_state', to: "states#go_to_state"
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,16 +1,24 @@
 <h2>Welcome!</h2>
 
 <h3>States You Are Following</h3>
+
 <ul>
 <% @user.states.uniq.each do |state| %>
-<li><%= link_to state.name, state_path(state) %></li>
-<br>
-<% end %>
+  <% @user.subscriptions.each do |subscription| %>
+    <li><%= link_to state.name, state_path(state) %></li>
+    <%= button_to "Unfollow", subscription, method: :delete %>
+    <br>
+    <% end %>
+  <% end %>
 </ul>
 
-
-
-
-<script>
-prompt('Where are you visiting us from today??');
-</script>
+<div>
+    <small><%= link_to "Edit Your Account Here", edit_user_registration_path(current_user) %></small>
+</div>
+<p>Like or share this site on facebook!</p>
+<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+  <br>
+  <p>Tweet this site to your followers!</p>  
+<div>
+<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>

@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MarijuanaApp</title>
+  <title>Marijuana Policy Tracker</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
 </head>
-<header>
-  <% image_tag '/images/usatodaylogo.png' %>
-  <% image_tag '/images/usericon.png' %>
-</header>
+
 <body>
+  <header>
+    <%= image_tag('usatodaylogo.png', class: 'logo', height:'35') %>
+    <%= image_tag('usericon.png', class: 'user_image', height: '35')%>
+  </header>
+
+  <div class="nav">
+    <ul>
+      <% if user_signed_in? %>
+        <li>Logged in as <strong><%= current_user.email %></strong></li>
+        <li>  <%= link_to 'Signout', destroy_user_session_path, :method => :delete %> </li>
+      <% else %>
+        <li>  <%= link_to "Sign up", new_user_registration_path %> </li>
+        <li>  <%= link_to "Login", new_user_session_path %> </li>
+      <% end %>
+    </ul>
+
+    <ul>
+      <% if user_signed_in? %>
+      <li><%= link_to "Your Profile", '/profile' %></li>
+      <% end %>
+      <li><%= link_to "Home Page", '/states' %></li>
+    </ul>
+
+  </div>
+
+  <a href="https://twitter.com/Mj_Policy_Trckr" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Mj_Policy_Trckr</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
 
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
@@ -40,11 +64,28 @@
 <div>
 
 <%= yield %>
+
+  <div id="fb-root">
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  </div>
+
+
+  <%= yield %>
+
+
+  <footer>
+    <div class = "disclaimer">
+      <small>Disclaimer: This is not intended for or offered for legal advice. It is for informational and educational purposes only. It also does not capture nuances of the laws, many of which are a dozen or more pages. Please consult with an attorney licensed to practice in the state in question for legal advice. </small>
+    </div>
+  </footer>
+
 </body>
-<footer>
-  <div class = "disclaimer">
-    <small>Disclaimer: This is not intended for or offered for legal advice. It is for informational and educational purposes
-      only. It also does not capture nuances of the laws, many of which are a dozen or more pages. Please consult with
-     an attorney licensed to practice in the state in question for legal advice. <small>
-</footer>
+
+
 </html>

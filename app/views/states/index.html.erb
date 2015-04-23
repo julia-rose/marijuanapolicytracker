@@ -51,7 +51,7 @@
     </div>
 
    <div class="state_menu">
-     <h3>View Current Policy for:</h3>
+     <h3>View Current Policy and News for:</h3>
         <form action= "go_to_state" method='post'>
           <%#= select("get", :id, @states.collect {|state| [ state.name, state.id ] }, {prompt: "Select State"}) %>
           <select name="id">
@@ -59,7 +59,7 @@
             <option value="<%= state.id %>"><%= state.name %></option>
             <% end %>
           </select>
-        <input type='submit'>
+        <input type='submit' value="Go">
         <%#= button_to "Submit", "states/" + state.id %>
         <%#= button_to "Show", states_path(@state), :class => "button", :method => :get %>
         </form>

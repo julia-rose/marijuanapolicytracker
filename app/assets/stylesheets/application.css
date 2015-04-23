@@ -120,16 +120,18 @@ body {
     text-align: center;
   }
 
-div.time_divisions {
-  margin-left: 18px;
-}
+  .time_divisions {
+    margin-left: 18px;
+  }
 
-.state_menu {
-  display: inline-block;
-  text-align: center;
-}
-.disclaimer {
-  text-align: left;
-  width: 100px;
-}
+  .state_menu {
+    display: inline-block;
+    text-align: center;
+  }
 
+  .disclaimer {
+    text-align: left;
+    width: 300px;
+    font-size: 12px;
+    border: 1px solid black;
+  }

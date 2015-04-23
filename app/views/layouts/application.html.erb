@@ -7,11 +7,12 @@
   <%= csrf_meta_tags %>
   <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
 </head>
-<header>
-  <% image_tag '/images/usatodaylogo.png' %>
-  <% image_tag '/images/usericon.png' %>
-</header>
+
 <body>
+  <header>
+    <% image_tag '/images/usatodaylogo.png' %>
+    <% image_tag '/images/usericon.png' %>
+  </header>
 
   <p class="nav">
     <% if user_signed_in? %>
@@ -28,15 +29,15 @@
     <li><%= link_to "Your Profile", '/profile' %></li>
     <% end %>
     <li><%= link_to "Home Page", '/states' %></li>
-<div>
+</div>
 
 <%= yield %>
-
+  <footer>
+    <div class = "disclaimer">
+      <small>Disclaimer: This is not intended for or offered for legal advice. It is for informational and educational purposes only. It also does not capture nuances of the laws, many of which are a dozen or more pages. Please consult with an attorney licensed to practice in the state in question for legal advice. </small>
+    </div>
+  </footer>
 </body>
-<footer>
-  <div class = "disclaimer">
-    <small>Disclaimer: This is not intended for or offered for legal advice. It is for informational and educational purposes
-      only. It also does not capture nuances of the laws, many of which are a dozen or more pages. Please consult with
-     an attorney licensed to practice in the state in question for legal advice. <small>
-</footer>
+
+
 </html>

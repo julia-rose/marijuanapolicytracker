@@ -1,6 +1,6 @@
-<h1><%= @state.name %></h1>
+<h1 class="title"><%= @state.name %></h1>
 
-<div class="follow button">
+<div class="follow">
 <% if user_signed_in? %>
 	<%= render partial: "subscriptions/form" %>
 <% else %>
@@ -9,35 +9,37 @@
 </div>
 
 
-<h2>Current Marijuana Policy</h2>
-
 <div class="icons">
 
-	<%= image_tag("possession.png", class: "#{@state.possession}") %> <div class="details"><%= @state.possession_details %></div>
-	<%= image_tag("paraphernalia.png", class: "#{@state.paraphernalia}") %> <div class="details"><%= @state.paraphernalia_details %></div>
-	<%= image_tag("consumption.png", class: "#{@state.consumption}") %> <div class="details"><%= @state.consumption_details %></div>
-	<%= image_tag("growing.png", class: "#{@state.growing}" ) %> <div class="details"><%= @state.growing_details %></div>
-	<%= image_tag("medical.png", class: "#{@state.medical}" ) %> <div class="details"><%= @state.medical_details %></div>
-	<%= image_tag("buy_or_sell.png", class: "#{@state.buy_or_sell}" ) %> <%= @state.buy_or_sell_details %></div>
+	<h2 class="policy">Current Marijuana Policy</h2>
+
+	<div class="line"><%= image_tag("possession.png", class: "#{@state.possession}") %> <div class="details"><%= @state.possession_details %></div></div>
+	<div class="line"><%= image_tag("paraphernalia.png", class: "#{@state.paraphernalia}") %> <div class="details"><%= @state.paraphernalia_details %></div></div>
+	<div class="line"><%= image_tag("consumption.png", class: "#{@state.consumption}") %> <div class="details"><%= @state.consumption_details %></div></div>
+	<div class="line"><%= image_tag("growing.png", class: "#{@state.growing}" ) %> <div class="details"><%= @state.growing_details %></div></div>
+	<div class="line"><%= image_tag("medical.png", class: "#{@state.medical}" ) %> <div class="details"><%= @state.medical_details %></div></div>
+	<div class="line"><%= image_tag("buy_or_sell.png", class: "#{@state.buy_or_sell}" ) %> <div class="details"><%= @state.buy_or_sell_details %></div></div>
 
 </div>
 
+<div class="news">
+	<h2>State News</h2>
 
-<h2>State News</h2>
+	<ul>
+	<% @news["results"].each_with_index do |result, index| %>
+		<li><%= link_to @news["results"][index]["title"], @news["results"][index]["url"] %></li>
+		<% end %>
+	</ul>
+</div>
 
-<ul>
-<% @news["results"].each_with_index do |result, index| %>
-	<li><%= link_to @news["results"][index]["title"], @news["results"][index]["url"] %></li>
-	<% end %>
-</ul>
+<div class="resources">
+	<h2>Resources in this State</h2>
 
-<% if @resources["stores"].count > 0 %>
-<h2>Resources in this State</h2>
+	<ul>
+		<li><a href="#">Dummy Link</a></li>
+		<li><a href="#">Dummy Link</a></li>
+		<li><a href="#">Dummy Link</a></li>
+	</ul>
+</div>
 
-<ul>
-<% @resources["stores"].each_with_index do |store, index| %>
-<li><%= link_to @resources["stores"][index]["name"], @resources["stores"][index]["permalink"]%> - <%= @resources["stores"][index]["locationLabel"] %></li>
-<% end %>
-</ul>
-<% end %>
 

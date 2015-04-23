@@ -64,8 +64,12 @@ div.actual_timeline {
   display: inline-block;
   text-align: center;
 }
-.diclaimer {
+
+footer {
+  display: block;
+
+}
+.disclaimer {
   text-align: left;
-  width: 100px;
 }
 

@@ -1,27 +1,85 @@
+.title{
 
- div.icons {
+}
+
+.policy {
+  display: block;
+  padding: 30px;
+}
+
+.follow {
+  float: right;
+  display: inline-block;
+}
+
+.follow_button {
+  padding:5px;
+  background-color: #dcdcdc;
+  border: 1px solid #666;
+  border-radius: 5px;
+  color:#000;
+  max-width: 175px;
+  max-height: 100px;
+  white-space: normal;
+}
+
+.icons {
  	width: 450px;
  	margin: 0 auto;
+  padding-right: 10px;
  }
 
- div.details{
-
- }
+.line {
+  position:relative;
+  padding: 10px;
+}
 
 .legal {
   	height: 42px;
 		width: 42px;
-  	border: 3px solid #0E5226;
+  	border: 3px solid #006600;
+    color: #006600;
   }
 
 .caution {
   	height: 42px;
 		width: 42px;
-  	border: 3px solid #EB9915;
+  	border: 3px solid #FF9900;
+    color: #FF9900;
   }
 
 .illegal {
   	height: 42px;
 		width: 42px;
-  	border: 3px solid #E30E0E;
+  	border: 3px solid #FF0000;
+    color: #FF0000;
   }
+
+.details{
+  position: absolute;
+  top: 15px;
+  left: 70px;
+ }
+
+.news{
+  position: inline-block;
+  max-width: 400px;
+  float: left;
+
+}
+
+.resources{
+  position: inline-block;
+  max-width: 400px;
+  float:right;
+
+}
+
+footer {
+  display: block;
+
+}
+
+
+
+

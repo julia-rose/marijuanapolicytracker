@@ -13,10 +13,10 @@ class StatesController < ApplicationController
 		leafly_id = ENV['leafly_id']
 		leafly_key = ENV['leafly_key']
 
-		Vaporizer.configure do |config|
-  		config.app_id = "#{leafly_id}"
-  		config.app_key = "#{leafly_key}"
-		end
+		# Vaporizer.configure do |config|
+  # 		config.app_id = "#{leafly_id}"
+  # 		config.app_key = "#{leafly_key}"
+		# end
 		if @state.name == "District of Columbia"
 			@news = Unirest.get("https://faroo-faroo-web-search.p.mashape.com/api?q=marijuana+d.c.",
   		headers:{
@@ -32,7 +32,7 @@ class StatesController < ApplicationController
 			  }).body
 		end
 
-		@resources = Vaporizer::Location.search(latitude: @state.lat, longitude: @state.long, page: 0, take: 5)
+		# @resources = Vaporizer::Location.search(latitude: @state.lat, longitude: @state.long, page: 0, take: 5)
 
 		@subscription = Subscription.new(state: @state, user: current_user)
 	end

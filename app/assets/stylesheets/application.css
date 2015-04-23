@@ -41,6 +41,12 @@ body {
    width:100%;
    text-align:center;
  }
+ header em {
+   font-style: italic;
+ }
+ header strong {
+   font-weight: bold;
+ }
  header li{
     display:inline-block;
     padding:3px 10px;

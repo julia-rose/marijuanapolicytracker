@@ -15,10 +15,7 @@
       <li><%= image_tag('usatodaylogo.png', class: 'logo', height:'35') %></li>
       <li><%= link_to "Home", '/states', class: "home_page" %></li>
       <% if user_signed_in? %>
-      <li><%= link_to "Profile", '/profile', class: "your_profile" %></li>
-      <% end %>
-      <% if user_signed_in? %>
-        <li>Logged in as <strong><%= current_user.email %></strong></li>
+        <li><em><%= link_to "Logged in as #{current_user.email}", '/profile'%></em></li>
         <li>  <%= link_to 'Signout', destroy_user_session_path, :method => :delete, class: "sign_out" %> </li>
       <% else %>
         <li>  <%= link_to "Sign up", new_user_registration_path, class: "sign_up" %> </li>

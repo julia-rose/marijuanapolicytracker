@@ -13,7 +13,11 @@
 
     <ul>
       <li><%= image_tag('usatodaylogo.png', class: 'logo', height:'35') %></li>
-
+      <% if user_signed_in? %>
+      <li><%= link_to "Your Profile", '/profile', class: "your_profile" %></li>
+      <% end %>
+      <li><%= link_to "Home Page", '/states', class: "home_page" %></li>
+      <li><%= image_tag('usericon.png', class: 'user_image', height: '35')%></li>
       <% if user_signed_in? %>
         <li>Logged in as <strong><%= current_user.email %></strong></li>
         <li>  <%= link_to 'Signout', destroy_user_session_path, :method => :delete, class: "sign_out" %> </li>
@@ -22,11 +26,7 @@
         <li>  <%= link_to "Login", new_user_session_path, class: "login" %> </li>
       <% end %>
 
-      <% if user_signed_in? %>
-      <li><%= link_to "Your Profile", '/profile', class: "your_profile" %></li>
-      <% end %>
-      <li><%= link_to "Home Page", '/states', class: "home_page" %></li>
-      <li><%= image_tag('usericon.png', class: 'user_image', height: '35')%></li>
+
     </ul>
 
   </header>

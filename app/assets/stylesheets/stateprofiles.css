@@ -86,6 +86,7 @@
 .news h2,
 .resources h2 {
   font-size: 25px;
+  padding: 20px;
 }
 
 .news ul,
@@ -102,8 +103,3 @@
 
 
 }
-
-
-
-
-

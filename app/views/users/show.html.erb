@@ -1,28 +1,32 @@
-<h2>Welcome!</h2>
+<div class="main">
+<h2>My Account Profile</h2>
 
-<h3 class="states_header">| States You Are Following |</h3>
+<div class="subscription">
+<h3 class="states_header">Subscriptions</h3>
 
-<div class="Main">
-  <ul class="state_list">
-  <% @user.states.uniq.each do |state| %>
-    <% @user.subscriptions.each do |subscription| %>
-      <div class="state_link"><li><%= link_to state.name, state_path(state) %></li></div>
-      <div class="unfollow"><%= button_to "Unfollow", subscription, method: :delete %></div>
-      <br>
+
+    <ul class="state_list">
+    <% @user.states.uniq.each do |state| %>
+      <% @user.subscriptions.each do |subscription| %>
+        <div class="state_link"><li><%= link_to state.name, state_path(state) %></li></div>
+        <div class="unfollow"><%= button_to "Unfollow", subscription, method: :delete %></div>
+        <br>
+        <% end %>
       <% end %>
-    <% end %>
-  </ul>
-</div>
-
-<div class="sidebar">
-  <div class="account_link">
-    <small><%= link_to "Edit Your Account Here", edit_user_registration_path(current_user) %></small>
+    </ul>
   </div>
+
+  <div class="account">
+    <div class="account_link">
+      <!-- <h3>Account Info</h3> -->
+    <%= button_to "Edit Your Account Here", edit_user_registration_path(current_user), method: :get, class: "follow_button" %>
+    </div>
+    <p>Tweet this site to your followers!</p>
+    <div>
+      <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </div>
     <p>Like or share this site on facebook!</p>
-  <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
     <br>
-  <p>Tweet this site to your followers!</p>
-  <div>
-    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
   </div>
 </div>

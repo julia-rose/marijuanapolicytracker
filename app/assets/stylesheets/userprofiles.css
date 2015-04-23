@@ -1,35 +1,37 @@
-.Main {
-  float:left;
-  width:620px;
+.main {
+  text-align: center;
+  display: block;
+  width: 800px;
+  margin: 0 auto;
 }
 
-.sidebar {
-    float:left;
-    width:340px;
+h2{
+  border-bottom: 2px solid black;
 }
 
-.states_header {
-  /*text-decoration: underline;*/
-  margin: 5px;
+h3{
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+
+.subscription{
+  text-align: left;
+  padding-left: 50px;
+  padding-top: 20px;
+  border-bottom: 2px solid black;
 }
 
 .state_list {
-  margin: 10px
+  padding-bottom: 30px;
 }
-.state_link {
-  margin: 5px;
-  padding: 5px;
-  font-style: oblique;
-  font_style: bold;
+.account {
+  padding-top: 20px;
+  text-align: left;
+  padding-left: 50px;
 }
-
-.unfollow {
-
-}
-
 .account_link {
   padding-bottom: 10px;
-  font-style: oblique;
 }
 
 .fb-like {

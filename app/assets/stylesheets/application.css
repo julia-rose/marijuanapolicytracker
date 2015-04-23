@@ -35,6 +35,7 @@ h1 {
 
 h2 {
   text-align: center;
+
 }
 
 body {
@@ -62,16 +63,18 @@ body {
  }
 
  body h2 {
+   font-size: 40px;
    text-align: center;
    margin-left: auto;
    margin-right: auto;
-   padding-top: 100px;
+   padding-top: 50px;
+   padding-bottom: 10px;
  }
 
 
  div.timeline_form input#first{
-   margin-left: 1.5em;
-   border: solid black 1px;
+   /*margin-left: 1.5em;*/
+   /*border: solid black 1px;*/
  }
 
  .display_image img {
@@ -86,29 +89,30 @@ body {
       display: inline-block;
   }*/
 
-  div.time_divisions {
-    margin-left: 18px;
+  .time_divisions {
+    /*margin-left: 18px;*/
   }
 
-  div.actual_timeline {
+  .actual_timeline {
     width: 44em;
     border-bottom: thick solid black;
     border-width: 10px;
-    margin-left: 1em;
+    margin-left: 2.3em;
     margin-bottom: 1em;
   }
 
   div.timeline_form input#first{
-    margin-left: 1.5em;
+    margin-left: -36em;
     color: black;
   }
 
-  div.timeline_form input#second{
-    margin-left: 5em;
+  .timeline_form input#second{
+
   }
 
-  div.timeline_form input#third{
-    margin-left: 30em;
+  .timeline_form input#third{
+    margin-right: 3em;
+
   }
   .state_menu {
     margin-left: auto;
@@ -121,7 +125,7 @@ body {
   }
 
   .time_divisions {
-    margin-left: 18px;
+
   }
 
   .state_menu {
@@ -135,3 +139,10 @@ body {
     font-size: 12px;
     border: 1px solid black;
   }
+.wrapper {
+  text-align:center;
+}
+.wrapper>div
+{
+  display:inline-block;
+}

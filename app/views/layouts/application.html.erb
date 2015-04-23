@@ -40,22 +40,7 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 
-  <p class="nav">
-    <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.email %></strong>
-      <%= link_to 'Signout', destroy_user_session_path, :method => :delete %>
-    <% else %>
-      <%= link_to "Sign up", new_user_registration_path %>
-      <%= link_to "Login", new_user_session_path %>
-    <% end %>
-  </p>
-<div>
-  <ul>
-    <% if user_signed_in? %>
-    <li><%= link_to "Your Profile", '/profile' %></li>
-    <% end %>
-    <li><%= link_to "Home Page", '/states' %></li>
-</div>
+
 
 
 <%= yield %>

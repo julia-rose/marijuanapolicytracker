@@ -13,7 +13,6 @@
     <%= image_tag('usericon.png', class: 'user_image', height: '35')%>
   </header>
 
-
   <div class="nav">
       <p>
       <% if user_signed_in? %>
@@ -31,6 +30,33 @@
       <li><%= link_to "Home Page", '/states' %></li>
     </ul>
   </div>
+
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <p class="nav">
+    <% if user_signed_in? %>
+      Logged in as <strong><%= current_user.email %></strong>
+      <%= link_to 'Signout', destroy_user_session_path, :method => :delete %>
+    <% else %>
+      <%= link_to "Sign up", new_user_registration_path %>
+      <%= link_to "Login", new_user_session_path %>
+    <% end %>
+  </p>
+<div>
+  <ul>
+    <% if user_signed_in? %>
+    <li><%= link_to "Your Profile", '/profile' %></li>
+    <% end %>
+    <li><%= link_to "Home Page", '/states' %></li>
+</div>
+
 
 <%= yield %>
 

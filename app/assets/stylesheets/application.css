@@ -122,5 +122,14 @@ body {
 
 div.time_divisions {
   margin-left: 18px;
+}
 
+.state_menu {
+  display: inline-block;
+  text-align: center;
+}
+.disclaimer {
+  text-align: left;
+  width: 100px;
+}
 

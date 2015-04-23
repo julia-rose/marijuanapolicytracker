@@ -11,7 +11,11 @@
 .title{
   font-size: 45px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.status {
+  text-align: center;
 }
 
 .follow {
@@ -33,7 +37,6 @@
 .icons {
  	width: 450px;
  	margin: 0 auto;
-  padding-bottom: 50px;
  }
 
 .line {
@@ -73,6 +76,8 @@
 #container2 {
   clear:left;
   float:left;
+  margin-left: 50px;
+  margin-right: 50px;
   width:100%;
   overflow:hidden;
 }
@@ -98,8 +103,7 @@
   padding: 20px;
 }
 
-.news ul,
-.resources ul {
+ul {
   list-style-type: circle;
 }
 

@@ -54,13 +54,13 @@ body {
    text-align: center;
    margin-left: auto;
    margin-right: auto;
-   padding-top: 20px;
+   padding-top: 30px;
    padding-bottom: 10px;
  }
 
  .twitter {
   float: right;
-  margin: 15px;
+  margin: 5px;
  }
 
  .display_image img {

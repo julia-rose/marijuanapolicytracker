@@ -9,7 +9,11 @@
          function checkValue2(){
            document.getElementById("imagetest").innerHTML = "<img src='assets/1996map.png'>";
          }
-         function checkValue3(){
+          function checkValue3(){
+           document.getElementById("imagetest").innerHTML = "<img src='assets/2005map.png'>";
+         }
+
+         function checkValue4(){
            document.getElementById("imagetest").innerHTML = "<img src='assets/2015map.png'>";
          }
    </script>
@@ -26,7 +30,8 @@
         <form name='timeline_buttons'>
           <div style="left:0px;"><input id='first'  type="radio" name="field" value="one" onclick='checkValue1()'>1990</div>
           <div style="left:19%;"><input id='second' type="radio" name="field" value="two" onclick='checkValue2()'>1996</div>
-          <div style="right:0px;"><input id='third'  type="radio" name="field" value="three" onclick='checkValue3()'>2015</div>
+          <div style="left:60%;"><input id='second' type="radio" name="field" value="three" onclick='checkValue3()'>2005</div>
+          <div style="right:0px;"><input id='fourth'  type="radio" name="field" value="four" onclick='checkValue4()'>2015</div>
         </form>
     </div>
 

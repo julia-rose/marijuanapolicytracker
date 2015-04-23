@@ -1,15 +1,24 @@
 <h1><%= @state.name %></h1>
 
+<div class="follow button">
+<% if user_signed_in? %>
+	<%= render partial: "subscriptions/form" %>
+<% else %>
+	<small>Sign in to subscribe to this page!</small>
+<% end %>
+</div>
+
+
 <h2>Current Marijuana Policy</h2>
 
 <div class="icons">
 
-	<p><%= image_tag("possession.png", class: "#{@state.possession}") %> <%= @state.possession_details %></p>
-	<p><%= image_tag("paraphernalia.png", class: "#{@state.paraphernalia}") %> <%= @state.paraphernalia_details %></p>
-	<p><%= image_tag("consumption.png", class: "#{@state.consumption}") %> <%= @state.consumption_details %></p>
-	<p><%= image_tag("growing.png", class: "#{@state.growing}" ) %> <%= @state.growing_details %></p>
-	<p><%= image_tag("medical.png", class: "#{@state.medical}" ) %> <%= @state.medical_details %></p>
-	<p><%= image_tag("buy_or_sell.png", class: "#{@state.buy_or_sell}" ) %> <%= @state.buy_or_sell_details %></p>
+	<%= image_tag("possession.png", class: "#{@state.possession}") %> <div class="details"><%= @state.possession_details %></div>
+	<%= image_tag("paraphernalia.png", class: "#{@state.paraphernalia}") %> <div class="details"><%= @state.paraphernalia_details %></div>
+	<%= image_tag("consumption.png", class: "#{@state.consumption}") %> <div class="details"><%= @state.consumption_details %></div>
+	<%= image_tag("growing.png", class: "#{@state.growing}" ) %> <div class="details"><%= @state.growing_details %></div>
+	<%= image_tag("medical.png", class: "#{@state.medical}" ) %> <div class="details"><%= @state.medical_details %></div>
+	<%= image_tag("buy_or_sell.png", class: "#{@state.buy_or_sell}" ) %> <%= @state.buy_or_sell_details %></div>
 
 </div>
 
@@ -22,13 +31,13 @@
 	<% end %>
 </ul>
 
+<% if @resources["stores"].count > 0 %>
+<h2>Resources in this State</h2>
 
-
-<div class="follow button">
-<% if user_signed_in? %>
-	<%= render partial: "subscriptions/form" %>
-<% else %>
-	<small>Sign in to subscribe to this page!</small>
+<ul>
+<% @resources["stores"].each_with_index do |store, index| %>
+<li><%= link_to @resources["stores"][index]["name"], @resources["stores"][index]["permalink"]%> - <%= @resources["stores"][index]["locationLabel"] %></li>
 <% end %>
-</div>
+</ul>
+<% end %>
 

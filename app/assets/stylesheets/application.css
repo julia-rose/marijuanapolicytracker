@@ -16,8 +16,11 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
+h1 {
+	text-align: center;
+}
+
 h2 {
-  border: solid black 1px;
   text-align: center;
 }
 .nav {
@@ -28,24 +31,6 @@ h2 {
 div.display_image img {
    width: 50em;
  }
-
-.legal {
-  	height: 42px;
-		width: 42px;
-  	border: 3px solid #0E5226;
-  }
-
-.caution {
-  	height: 42px;
-		width: 42px;
-  	border: 3px solid #EB9915;
-  }
-
-.illegal {
-  	height: 42px;
-		width: 42px;
-  	border: 3px solid #E30E0E;
-  }
 
  div.timeline_form input#first{
    margin-left: 1.5em;
@@ -60,7 +45,6 @@ div.timeline_form input#third{
   margin-left: 44em;
   margin-bottom: 2em;
 }
-
 
 
 div.time_divisions {

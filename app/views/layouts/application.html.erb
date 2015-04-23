@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MarijuanaApp</title>
+  <title>Marijuana Policy Tracker</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
   <header>
     <%= image_tag('usatodaylogo.png', class: 'logo', height:'35') %>
@@ -14,7 +15,7 @@
   </header>
 
   <div class="nav">
-      <ul>
+    <ul>
       <% if user_signed_in? %>
         <li>Logged in as <strong><%= current_user.email %></strong></li>
         <li>  <%= link_to 'Signout', destroy_user_session_path, :method => :delete %> </li>
@@ -22,30 +23,32 @@
         <li>  <%= link_to "Sign up", new_user_registration_path %> </li>
         <li>  <%= link_to "Login", new_user_session_path %> </li>
       <% end %>
-      </ul>
+    </ul>
+
     <ul>
       <% if user_signed_in? %>
       <li><%= link_to "Your Profile", '/profile' %></li>
       <% end %>
       <li><%= link_to "Home Page", '/states' %></li>
     </ul>
+
   </div>
+
   <a href="https://twitter.com/Mj_Policy_Trckr" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Mj_Policy_Trckr</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+  <div id="fb-root">
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  </div>
 
 
+  <%= yield %>
 
-<div class= "wrapper">
-<%= yield %>
-</div>
 
   <footer>
     <div class = "disclaimer">

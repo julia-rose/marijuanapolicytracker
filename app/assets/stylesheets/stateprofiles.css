@@ -1,9 +1,17 @@
-.title{
-  font-size: 45px;
-}
-
 .policy {
   font-size: 30px;
+  text-align: center;
+}
+
+.for {
+  font-size: 12px;
+  text-align: center;
+}
+
+.title{
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .follow {
@@ -56,6 +64,7 @@
 
 .details{
   font-size: 14px;
+  text-align: left;
   position: absolute;
   top: 15px;
   left: 70px;

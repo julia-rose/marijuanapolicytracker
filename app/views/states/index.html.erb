@@ -1,4 +1,19 @@
 <div class= "wrapper">
+
+    <div class="twitter">
+      <a href="https://twitter.com/Mj_Policy_Trckr" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Mj_Policy_Trckr</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </div>
+
+  <div id="fb-root">
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  </div>
+
   <h2>Marijuana Laws in the US Over Time</h2>
 
 
@@ -9,7 +24,11 @@
          function checkValue2(){
            document.getElementById("imagetest").innerHTML = "<img src='assets/1996map.png'>";
          }
-         function checkValue3(){
+          function checkValue3(){
+           document.getElementById("imagetest").innerHTML = "<img src='assets/2005map.png'>";
+         }
+
+         function checkValue4(){
            document.getElementById("imagetest").innerHTML = "<img src='assets/2015map.png'>";
          }
    </script>
@@ -24,9 +43,10 @@
 
       <div class = "actual_timeline"></div>
         <form name='timeline_buttons'>
-          <input id='first'  type="radio" name="field" value="one" onclick='checkValue1()'>1990
-          <input id='second' type="radio" name="field" value="two" onclick='checkValue2()'>1996
-          <input id='third'  type="radio" name="field" value="three" onclick='checkValue3()'>2015
+          <div style="left:0px;"><input id='first'  type="radio" name="field" value="one" onclick='checkValue1()'>1990</div>
+          <div style="left:19%;"><input id='second' type="radio" name="field" value="two" onclick='checkValue2()'>1996</div>
+          <div style="left:60%;"><input id='second' type="radio" name="field" value="three" onclick='checkValue3()'>2005</div>
+          <div style="right:0px;"><input id='fourth'  type="radio" name="field" value="four" onclick='checkValue4()'>2015</div>
         </form>
     </div>
 

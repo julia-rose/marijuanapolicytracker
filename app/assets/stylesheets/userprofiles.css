@@ -1,4 +1,37 @@
-.states_header {
-  text-decoration: underline;
+.Main {
+  float:left;
+  width:620px;
+}
 
+.sidebar {
+    float:left;
+    width:340px;
+}
+
+.states_header {
+  /*text-decoration: underline;*/
+  margin: 5px;
+}
+
+.state_list {
+  margin: 10px
+}
+.state_link {
+  margin: 5px;
+  padding: 5px;
+  font-style: oblique;
+  font_style: bold;
+}
+
+.unfollow {
+
+}
+
+.account_link {
+  padding-bottom: 10px;
+  font-style: oblique;
+}
+
+.fb-like {
+  padding-bottom: 10px;
 }

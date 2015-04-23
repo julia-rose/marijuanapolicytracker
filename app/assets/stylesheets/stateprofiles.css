@@ -1,15 +1,14 @@
 .title{
-
+  font-size: 45px;
 }
 
 .policy {
-  display: block;
-  padding: 30px;
+  font-size: 30px;
 }
 
 .follow {
   float: right;
-  display: inline-block;
+  padding-right: 15px;
 }
 
 .follow_button {
@@ -26,7 +25,7 @@
 .icons {
  	width: 450px;
  	margin: 0 auto;
-  padding-right: 10px;
+  padding-bottom: 50px;
  }
 
 .line {
@@ -56,11 +55,25 @@
   }
 
 .details{
+  font-size: 14px;
   position: absolute;
   top: 15px;
   left: 70px;
  }
 
+#container2 {
+  clear:left;
+  float:left;
+  width:100%;
+  overflow:hidden;
+}
+
+#container1 {
+  float:left;
+  width:100%;
+  position:relative;
+  right:50%;
+}
 .news{
   float:left;
   width:46%;
@@ -68,6 +81,16 @@
   left:52%;
   overflow:hidden;
 
+}
+
+.news h2,
+.resources h2 {
+  font-size: 25px;
+}
+
+.news ul,
+.resources ul {
+  list-style-type: circle;
 }
 
 .resources{

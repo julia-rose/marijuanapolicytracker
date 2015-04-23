@@ -15,7 +15,6 @@
  *
  {
      margin:0;
-     border:0;
      padding:0;
      border-collapse:collapse;
      border-spacing:0;
@@ -30,20 +29,40 @@
 
 body {
    font-family: 'Nunito', sans-serif;
-   min-width:900px;
+   width: 100%
+ }
+
+ header {
+   background-color: black;
+   height: 45px;
+   width: 100%;
  }
 
  header ul{
+   font-size: 13px;
    display:block;
    background-color:black;
    color:white;
-   width:100%;
    text-align:center;
+ }
+ .left {
+   float: left;
+ }
+ .right{
+   float: right;
+   text-align: center;
+   padding-top: 10px;
+ }
+ header em {
+   font-style: italic;
+ }
+ header strong {
+   font-weight: bold;
  }
  header li{
     display:inline-block;
     padding:3px 10px;
-    min-width:100px;
+    /*min-width:50px;*/
     background-color: black;
     vertical-align:middle;
  }
@@ -53,13 +72,13 @@ body {
    text-align: center;
    margin-left: auto;
    margin-right: auto;
-   padding-top: 50px;
+   padding-top: 30px;
    padding-bottom: 10px;
  }
 
  .twitter {
   float: right;
-  margin: 15px;
+  margin: 5px;
  }
 
  .display_image img {
@@ -122,11 +141,18 @@ body {
   }
 
   .disclaimer {
-    text-align: center;
-    width: 1000;
+    width: 800px;
     font-size: 12px;
     margin-left: auto;
     margin-right: auto;
+    padding: 20px;
+}
+  .disclaimer strong {
+    font-weight: bold;
+    font-size: 14px;
+  }
+.notes {
+  padding-top: 20px;
 }
 
 .wrapper {

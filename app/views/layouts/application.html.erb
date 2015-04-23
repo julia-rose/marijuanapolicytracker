@@ -11,15 +11,13 @@
 <body>
   <header>
 
-    <ul>
+    <ul class = "left">
       <li><%= image_tag('usatodaylogo.png', class: 'logo', height:'35') %></li>
+      <li><%= link_to "Home", '/states', class: "home_page" %></li>
+    </ul>
+    <ul class= "right">
       <% if user_signed_in? %>
-      <li><%= link_to "Your Profile", '/profile', class: "your_profile" %></li>
-      <% end %>
-      <li><%= link_to "Home Page", '/states', class: "home_page" %></li>
-      <li><%= image_tag('usericon.png', class: 'user_image', height: '35')%></li>
-      <% if user_signed_in? %>
-        <li>Logged in as <strong><%= current_user.email %></strong></li>
+        <li><em><%= link_to "Welcome #{current_user.email}", '/profile'%></em></li>
         <li>  <%= link_to 'Signout', destroy_user_session_path, :method => :delete, class: "sign_out" %> </li>
       <% else %>
         <li>  <%= link_to "Sign up", new_user_registration_path, class: "sign_up" %> </li>
@@ -79,7 +77,10 @@
 
   <footer>
     <div class = "disclaimer">
-      <small>Disclaimer: This is not intended for or offered for legal advice. It is for informational and educational purposes only. It also does not capture nuances of the laws, many of which are a dozen or more pages. Please consult with an attorney licensed to practice in the state in question for legal advice. </small>
+      <strong>Disclaimer:</strong> This is not intended for or offered for legal advice. It is for informational and educational purposes only. It also does not capture nuances of the laws, many of which are a dozen or more pages. Please consult with an attorney licensed to practice in the state in question for legal advice.
+      <p class="notes"> *Marijuana remains a Schedule 1 substance under federal law.</p>
+
+      <p class="notes">*Every state has DUID (driving under the influence of drugs) legislation on the books.  It is illegal to operate a motor vehicle under the influence of marijuana in all 50 states.</p>
     </div>
   </footer>
 

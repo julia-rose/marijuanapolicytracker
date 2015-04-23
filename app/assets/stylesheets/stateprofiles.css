@@ -1,14 +1,35 @@
-.title{
-  font-size: 45px;
+.policy {
+  margin-top: 20px;
+  font-size: 30px;
+  text-align: center;
 }
 
-.policy {
-  font-size: 30px;
+.for {
+  font-size: 12px;
+  text-align: center;
+}
+
+.title{
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.status {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid black;
+  margin-bottom: 20px;
+  width: 550px;
+  margin: 0 auto;
 }
 
 .follow {
   float: right;
-  padding-right: 15px;
+  padding-right: 6px;
+  padding-top: 6px;
+  font-size: 12px;
+
 }
 
 .follow_button {
@@ -25,7 +46,7 @@
 .icons {
  	width: 450px;
  	margin: 0 auto;
-  padding-bottom: 50px;
+  padding-top: 20px;
  }
 
 .line {
@@ -56,16 +77,17 @@
 
 .details{
   font-size: 14px;
+  text-align: left;
   position: absolute;
   top: 15px;
   left: 70px;
  }
 
 #container2 {
-  clear:left;
-  float:left;
-  width:100%;
+  width:80%;
+  margin: 0 auto;
   overflow:hidden;
+  border-bottom-width: 10px;
 }
 
 #container1 {
@@ -74,6 +96,22 @@
   position:relative;
   right:50%;
 }
+
+#container3 {
+  width:60%;
+  margin: 0 auto;
+  overflow:hidden;
+  border-bottom-width: 10px;
+
+}
+
+.news h2,
+.resources h2,
+.singleton h2 {
+  font-size: 25px;
+  padding: 20px;
+}
+
 .news{
   float:left;
   width:46%;
@@ -83,27 +121,16 @@
 
 }
 
-.news h2,
-.resources h2 {
-  font-size: 25px;
-}
-
-.news ul,
-.resources ul {
-  list-style-type: circle;
-}
-
 .resources{
   float:left;
   width:46%;
   position:relative;
   left:56%;
   overflow:hidden;
-
-
 }
 
 
-
-
-
+.news ul,
+.resources ul,
+.singleton ul {
+}

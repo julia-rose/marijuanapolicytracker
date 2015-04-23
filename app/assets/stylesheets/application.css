@@ -57,6 +57,11 @@ body {
    padding-bottom: 10px;
  }
 
+ .twitter {
+  float: right;
+  margin: 15px;
+ }
+
  .display_image img {
     width: 50em;
   }

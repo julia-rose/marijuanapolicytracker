@@ -87,6 +87,7 @@
   width:80%;
   margin: 0 auto;
   overflow:hidden;
+  border-bottom-width: 10px;
 }
 
 #container1 {
@@ -94,6 +95,14 @@
   width:100%;
   position:relative;
   right:50%;
+}
+
+#container3 {
+  width:60%;
+  margin: 0 auto;
+  overflow:hidden;
+  border-bottom-width: 10px;
+
 }
 
 .news h2,
@@ -120,11 +129,6 @@
   overflow:hidden;
 }
 
-.singleton {
-  width:60%;
-  margin: 0 auto;
-  overflow:hidden;
-}
 
 .news ul,
 .resources ul,

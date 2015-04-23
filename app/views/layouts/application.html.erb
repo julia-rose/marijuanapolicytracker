@@ -9,27 +9,24 @@
 </head>
 <body>
   <header>
-    <%= image_tag('usatodaylogo.png', class: 'logo', height:'35') %>
-    <%= image_tag('usericon.png', class: 'user_image', height: '35')%>
-  </header>
-
-  <div class="nav">
-      <ul>
+    <ul>
+      <li><%= image_tag('usatodaylogo.png', class: 'logo', height:'35') %></li>
       <% if user_signed_in? %>
         <li>Logged in as <strong><%= current_user.email %></strong></li>
-        <li>  <%= link_to 'Signout', destroy_user_session_path, :method => :delete %> </li>
+        <li>  <%= link_to 'Signout', destroy_user_session_path, :method => :delete, class: "sign_out" %> </li>
       <% else %>
-        <li>  <%= link_to "Sign up", new_user_registration_path %> </li>
-        <li>  <%= link_to "Login", new_user_session_path %> </li>
+        <li>  <%= link_to "Sign up", new_user_registration_path, class: "sign_up" %> </li>
+        <li>  <%= link_to "Login", new_user_session_path, class: "login" %> </li>
       <% end %>
-      </ul>
-    <ul>
       <% if user_signed_in? %>
-      <li><%= link_to "Your Profile", '/profile' %></li>
+      <li><%= link_to "Your Profile", '/profile', class: "your_profile" %></li>
       <% end %>
-      <li><%= link_to "Home Page", '/states' %></li>
+      <li><%= link_to "Home Page", '/states', class: "home_page" %></li>
+      <li><%= image_tag('usericon.png', class: 'user_image', height: '35')%></li>
     </ul>
-  </div>
+  </header>
+
+
 
   <div id="fb-root"></div>
   <script>(function(d, s, id) {

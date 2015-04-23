@@ -28,38 +28,24 @@
      font-family:inherit;
  }
 
-
-h1 {
-	text-align: center;
-}
-
-h2 {
-  text-align: center;
-
-}
-
 body {
    font-family: 'Nunito', sans-serif;
+   min-width:900px;
  }
 
- header {
-   background-color: black;
-   display: block;
+ header ul{
+   display:block;
+   background-color:black;
+   color:white;
+   width:100%;
+   text-align:center;
  }
-
- .logo {
-   margin-left: auto;
-   margin-right: auto;
- }
-
- .user_image {
-   float: right;
- }
-
- .nav li{
-   float: right;
-   display: inline-block;
-   padding-left: 10px;
+ header li{
+    display:inline-block;
+    padding:3px 10px;
+    min-width:100px;
+    background-color: black;
+    vertical-align:middle;
  }
 
  body h2 {
@@ -69,12 +55,6 @@ body {
    margin-right: auto;
    padding-top: 50px;
    padding-bottom: 10px;
- }
-
-
- div.timeline_form input#first{
-   /*margin-left: 1.5em;*/
-   /*border: solid black 1px;*/
  }
 
  .display_image img {
@@ -94,26 +74,33 @@ body {
   }
 
   .actual_timeline {
+    display:block;
+    margin:0 auto;
     width: 44em;
     border-bottom: thick solid black;
     border-width: 10px;
-    margin-left: 2.3em;
-    margin-bottom: 1em;
   }
 
-  div.timeline_form input#first{
-    margin-left: -36em;
-    color: black;
+  .timeline_form{
+    display:block;
+    width:700px;
+    margin:0 auto;
+  }
+  .timeline_form>*
+  {
+    width:100%;
+  }
+  .timeline_form form
+  {
+    position:relative;
+    height:30px;
+  }
+  .timeline_form form>div
+  {
+    position:absolute;
+    top:0;
   }
 
-  .timeline_form input#second{
-
-  }
-
-  .timeline_form input#third{
-    margin-right: 3em;
-
-  }
   .state_menu {
     margin-left: auto;
     margin-right: auto;
@@ -124,20 +111,18 @@ body {
     text-align: center;
   }
 
-  .time_divisions {
-
-  }
-
   .state_menu {
     display: inline-block;
     text-align: center;
   }
 
   .disclaimer {
-    text-align: left;
-    width: 300px;
+    text-align: center;
+    width: 1000;
     font-size: 12px;
     border: 1px solid black;
+    margin-left: auto;
+    margin_right: auto;
   }
 .wrapper {
   text-align:center;

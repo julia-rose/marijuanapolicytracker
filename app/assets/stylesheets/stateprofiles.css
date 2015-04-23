@@ -62,16 +62,21 @@
  }
 
 .news{
-  position: inline-block;
-  max-width: 400px;
-  float: left;
+  float:left;
+  width:46%;
+  position:relative;
+  left:52%;
+  overflow:hidden;
 
 }
 
 .resources{
-  position: inline-block;
-  max-width: 400px;
-  float:right;
+  float:left;
+  width:46%;
+  position:relative;
+  left:56%;
+  overflow:hidden;
+
 
 }
 

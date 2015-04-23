@@ -7,31 +7,33 @@
   <%= csrf_meta_tags %>
   <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
 </head>
-
 <body>
   <header>
-    <% image_tag '/images/usatodaylogo.png' %>
-    <% image_tag '/images/usericon.png' %>
+    <%= image_tag('usatodaylogo.png', class: 'logo', height:'35') %>
+    <%= image_tag('usericon.png', class: 'user_image', height: '35')%>
   </header>
 
-  <p class="nav">
-    <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.email %></strong>
-      <%= link_to 'Signout', destroy_user_session_path, :method => :delete %>
-    <% else %>
-      <%= link_to "Sign up", new_user_registration_path %>
-      <%= link_to "Login", new_user_session_path %>
-    <% end %>
-  </p>
-<div>
-  <ul>
-    <% if user_signed_in? %>
-    <li><%= link_to "Your Profile", '/profile' %></li>
-    <% end %>
-    <li><%= link_to "Home Page", '/states' %></li>
-</div>
+
+  <div class="nav">
+      <p>
+      <% if user_signed_in? %>
+        Logged in as <strong><%= current_user.email %></strong>
+      <li>  <%= link_to 'Signout', destroy_user_session_path, :method => :delete %> </li>
+      <% else %>
+      <li>  <%= link_to "Sign up", new_user_registration_path %> </li>
+      <li>  <%= link_to "Login", new_user_session_path %> </li>
+      <% end %>
+    </p>
+    <ul>
+      <% if user_signed_in? %>
+      <li><%= link_to "Your Profile", '/profile' %></li>
+      <% end %>
+      <li><%= link_to "Home Page", '/states' %></li>
+    </ul>
+  </div>
 
 <%= yield %>
+
   <footer>
     <div class = "disclaimer">
       <small>Disclaimer: This is not intended for or offered for legal advice. It is for informational and educational purposes only. It also does not capture nuances of the laws, many of which are a dozen or more pages. Please consult with an attorney licensed to practice in the state in question for legal advice. </small>

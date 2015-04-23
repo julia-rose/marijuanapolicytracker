@@ -3,13 +3,13 @@
 
  <script language="javascript" type=text/javascript>
     function checkValue1(){
-         document.getElementById("imagetest").innerHTML = "#{image_tag("1990map.png")}";
+         document.getElementById("imagetest").innerHTML = "<img src='assets/1990map.png'>";
        }
        function checkValue2(){
-         document.getElementById("imagetest").innerHTML = "<img src='http://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Map_of_USA_with_state_names.svg/2000px-Map_of_USA_with_state_names.svg.png'>";
+         document.getElementById("imagetest").innerHTML = "<img src='assets/1996map.png'>";
        }
        function checkValue3(){
-         document.getElementById("imagetest").innerHTML = "<img src='http://www.martinsaphug.com/wp-content/uploads/2010/07/mapoftheusa.jpg'>";
+         document.getElementById("imagetest").innerHTML = "<img src='assets/2015map.png'>";
        }
  </script>
 
@@ -45,5 +45,5 @@
   </div>
 
  <div class="display_image" id='imagetest'>
-   <%= image_tag("1990map.png") %>
+   <%= image_tag("2015map.png") %>
  </div>

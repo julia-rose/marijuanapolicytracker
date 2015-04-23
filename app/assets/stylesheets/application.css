@@ -34,6 +34,7 @@ body {
  }
 
  header ul{
+   font-size: 13px;
    display:block;
    background-color:black;
    color:white;
@@ -53,7 +54,7 @@ body {
    text-align: center;
    margin-left: auto;
    margin-right: auto;
-   padding-top: 30px;
+   padding-top: 20px;
    padding-bottom: 10px;
  }
 
@@ -122,12 +123,16 @@ body {
   }
 
   .disclaimer {
-    text-align: center;
-    width: 1000;
+    width: 800px;
     font-size: 12px;
     margin-left: auto;
     margin-right: auto;
+    padding: 20px;
 }
+  .disclaimer strong {
+    font-weight: bold;
+    font-size: 14px;
+  }
 
 .wrapper {
   text-align:center;

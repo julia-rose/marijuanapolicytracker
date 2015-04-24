@@ -6,13 +6,13 @@
 
 
     <ul class="state_list">
-    <% @user.states.uniq.each do |state| %>
+   
       <% @user.subscriptions.each do |subscription| %>
-        <div class="state_link"><li><%= link_to state.name, state_path(state) %></li></div>
+        <div class="state_link"><li><%= link_to subscription.state.name, state_path(subscription.state) %></li></div>
         <div class="unfollow"><%= button_to "Unfollow", subscription, method: :delete %></div>
         <br>
         <% end %>
-      <% end %>
+     
     </ul>
   </div>
 
